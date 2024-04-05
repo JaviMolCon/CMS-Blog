@@ -18,7 +18,7 @@ export const Home = () => {
       <div key={post.sys.id}>
         <p>{post.fields.author}</p>
         <p>{post.fields.date}</p>
-        <img width={500} src={post.fields.imgSrc}></img>
+        <img className='w-[500px] aspect-square object-cover rounded' src={post.fields.imgSrc}></img>
         </div>
       
       )}
