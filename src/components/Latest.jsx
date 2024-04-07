@@ -24,7 +24,7 @@ export const Latest = () => {
         <div className="card-body">
           <h2 className="card-title text-center">{post.fields.title}</h2>
           <div className="card-actions justify-center">
-            <Link to={`/home/blogpost/${post.sys.id}`} className="btn btn-primary transition ease-in-out delay-150 hover:-translate-y-1">Explore<span><img src="https://img.icons8.com/?size=16&id=45300&format=png" alt="arrow" /></span></Link>
+            <Link to={`/home/blogpost/${post.sys.id}`} className="btn btn-primary transition ease-in-out delay-150 hover:-translate-y-1">Read more<span><img src="https://img.icons8.com/?size=16&id=45300&format=png" alt="arrow" /></span></Link>
           </div>
         </div>
       </div>
