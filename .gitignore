@@ -8,9 +8,14 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+obj
 dist
 dist-ssr
 *.local
+
+# tailwind
+index.output.css
+tailwind.extension.json
 
 # Editor directories and files
 .vscode/*
@@ -20,5 +25,6 @@ dist-ssr
 *.suo
 *.ntvs*
 *.njsproj
+*.esproj
 *.sln
 *.sw?
