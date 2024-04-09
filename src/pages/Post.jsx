@@ -1,8 +1,5 @@
-import React from 'react';
-import Footer from '../components/Footer';
+import React from "react";
 
 export const Post = () => {
-  return (
-    <Footer />
-  )
-}
+  return <></>;
+};
