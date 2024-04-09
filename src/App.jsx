@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Post } from "./pages/Post";
 import SingleEntry from "./pages/SingleEntry";
-import MainLayout from "./layout/mainLayout";
+import MainLayout from "./layout/MainLayout";
 
 function App() {
   return (
