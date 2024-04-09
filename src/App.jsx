@@ -4,6 +4,7 @@ import { Post } from "./pages/Post";
 import SingleEntry from "./pages/SingleEntry";
 import MainLayout from "./layout/MainLayout";
 
+
 function App() {
   return (
     <>
