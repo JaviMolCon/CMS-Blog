@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(
@@ -42,7 +44,7 @@ const Navbar = () => {
               <a href="/home">Home</a>
             </li>
             <li>
-              <a href="/home/#latest">Latest</a>
+              <HashLink to="/home/#latest">Latest</HashLink>
             </li>
             <li>
               <a href="/post">Post Entry</a>
@@ -57,7 +59,7 @@ const Navbar = () => {
             <a href="/home">Home</a>
           </li>
           <li>
-            <a href="/home/#latest">Latest</a>
+            <HashLink to="/home/#latest">Latest</HashLink>
           </li>
           <li>
             <a href="/post">Post Entry</a>
