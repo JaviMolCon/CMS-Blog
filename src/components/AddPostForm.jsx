@@ -13,22 +13,22 @@
 // 4) Clarify text lengths in form
 // Remove TODOs that are done ;-)
 
-import "../index.css";
-import React, { useState } from 'react';
+import React from "react";
+import { useState } from "react";
 
-function AddPostForm() {
+export const Post = () => {
   const [formData, setFormData] = useState({
-    title: '',
-    author: '',
-    imageUrl: '',
-    comment: ''
+    title: "",
+    author: "",
+    imageUrl: "",
+    comment: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -37,50 +37,87 @@ function AddPostForm() {
 
     try {
       // TODO: Find Contentful endpoint here....
-      const response = await fetch('/Guess-my-Endpoint', {
-        method: 'POST',
+      const response = await fetch("/Guess-my-Endpoint", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
-      if (!response.ok) {        
+      if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }
 
       alert("Entry added successfully!");
       setFormData({
-        title: '',
-        author: '',
-        imageUrl: '',
-        comment: ''
+        title: "",
+        author: "",
+        imageUrl: "",
+        comment: "",
       }); // Reset form after sucessful submit
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
 
   return (
-    <div>
-      <h2>Add Post Form</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Title:</label><br />
-        <input type="text" id="title" name="title" value={formData.title} onChange={handleChange} required /><br /><br />
-
-        <label htmlFor="author">Author:</label><br />
-        <input type="text" id="author" name="author" value={formData.author} onChange={handleChange} required /><br /><br />
-
-        <label htmlFor="imageUrl">Image URL:</label><br />
-        <input type="url" id="imageUrl" name="imageUrl" value={formData.imageUrl} onChange={handleChange} required /><br /><br />
-
-        <label htmlFor="comment">Comment:</label><br />
-        <textarea id="comment" name="comment" value={formData.comment} onChange={handleChange} rows="4" cols="50"></textarea><br /><br />
-
-        <input type="submit" value="Post" />
+    <>
+      <div className="flex justify-center my-12 text-3xl font-bold">
+        <h1>Post your Blog here!</h1>
+      </div>
+      <form
+        className="flex flex-col justify-center my-12 gap-2 mx-2"
+        onSubmit={handleSubmit}
+        method="post"
+      >
+        <div className="flex justify-center">
+          <input
+            type="text"
+            placeholder="Enter a title"
+            className="input input-bordered input-primary w-[650px]"
+            required
+            onChange={handleChange}
+            // value={formData.title}
+          />
+        </div>
+        <div className="flex justify-center">
+          <input
+            type="text"
+            placeholder="Enter the name of author"
+            className="input input-bordered input-primary w-[650px]"
+            required
+            onChange={handleChange}
+            // value={formData.author}
+          />
+        </div>
+        <div className="flex justify-center">
+          <input
+            type="text"
+            placeholder="Enter the image url"
+            className="input input-bordered input-primary w-[650px]"
+            required
+            // value={formData.imageUrl}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex justify-center">
+          <textarea
+            className="textarea textarea-primary w-[650px] h-[500px]"
+            placeholder="Write content"
+            required
+            onChange={handleChange}
+            // value={formData.comment}
+          ></textarea>
+        </div>
+        <div className="flex justify-center w-full">
+          <button className="btn btn-active px-32 md:px-80 lg:px-80">
+            Post
+          </button>
+        </div>
       </form>
-    </div>
+    </>
   );
-}
+};
 
-export default AddPostForm;
+export default Post;
