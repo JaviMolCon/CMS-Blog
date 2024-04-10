@@ -51,7 +51,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost lg:ml-56 text-4xl">WanderLov</a>
+        <a className="lg:ml-32 text-3xl lg:text-4xl font-bold cursor-default" href="/home">WanderLov</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-bold text-2xl">
@@ -67,7 +67,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <div className="navbar-end flex items-center lg:pr-40">
+        <div className="navbar-end flex items-center lg:pr-32 cursor-default">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -88,7 +88,7 @@ const Navbar = () => {
           <input
             type="checkbox"
             value="synthwave"
-            className="toggle theme-controller mr-2"
+            className="toggle theme-controller mr-2 cursor-default"
             onClick={toggleTheme} // Call toggleTheme function on click
           />
 
