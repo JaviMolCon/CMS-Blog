@@ -11,11 +11,11 @@ const Navbar = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "dark" ? "pastel" : "dark"));
+    setTheme((prev) => (prev === "luxury" ? "pastel" : "luxury"));
   };
 
   return (
-    <div className="navbar bg-primary">
+    <div className="navbar bg-secondary">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,31 +36,31 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-bold text-2xl"
           >
             <li>
-              <a>Home</a>
+              <a href="/home">Home</a>
             </li>
             <li>
-              <a>Latest</a>
+              <a href="/home/#latest">Latest</a>
             </li>
             <li>
-              <a>Post Entry</a>
+              <a href="/post">Post Entry</a>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl lg:ml-56">ANJAJU Travel Blog</a>
+        <a className="btn btn-ghost lg:ml-56 text-4xl">WanderLov</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 font-bold text-2xl">
           <li>
-            <a>Home</a>
+            <a href="/home">Home</a>
           </li>
           <li>
-            <a>Latest</a>
+            <a href="/home/#latest">Latest</a>
           </li>
           <li>
-            <a>Post Entry</a>
+            <a href="/post">Post Entry</a>
           </li>
         </ul>
       </div>
@@ -101,7 +101,7 @@ const Navbar = () => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className={`ml-2 ${theme === "dark" ? "opacity-50" : ""}`}
+            className={`ml-2 ${theme === "luxury" ? "opacity-50" : ""}`}
           >
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>

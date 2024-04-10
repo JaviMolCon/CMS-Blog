@@ -2,6 +2,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getEntryById } from "../lib/contentfulClient";
+import Contact from "../components/Contact";
 
 const SingleEntry = () => {
   const [singleBlogPost, setSingleBlogPost] = useState([]);
@@ -48,11 +49,12 @@ const SingleEntry = () => {
       <div className="flex justify-center items-center my-12">
         <Link
           to="/home"
-          className="btn btn-primary transition ease-in-out delay-150 hover:-translate-y-1 text-xl"
+          className="btn btn-secondary transition ease-in-out delay-150 hover:-translate-y-1 text-xl"
         >
           Back to home
         </Link>
       </div>
+      <Contact />
     </>
   ) : (
     <p>Loading...</p>
