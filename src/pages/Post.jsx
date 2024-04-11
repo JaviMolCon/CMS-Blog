@@ -1,4 +1,3 @@
-
 // Post.jsx
 
 import React from "react";
@@ -7,50 +6,49 @@ import { createClient } from "contentful-management";
 
 import Contact from "../components/Contact";
 
-
 export const Post = () => {
   const [formData, setFormData] = useState({
-    title: '',
-    author: '',
-    imageUrl: '',
-    comment: '',
-    content: ''
+    title: "",
+    author: "",
+    imageUrl: "",
+    comment: "",
+    content: "",
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;  
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
-  const handleSubmit = async (e) => { 
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       createBlogPost(formData);
-    }
-    catch (error) {
+    } catch (error) {
       console.error("Error when invoking createBlogPost", error);
     }
   };
 
   const createBlogPost = async (newBlogData) => {
     try {
-      const strManagementAccessToken = import.meta.env.VITE_MANAGEMENT_ACCESS_TOKEN;
+      const strManagementAccessToken = import.meta.env
+        .VITE_MANAGEMENT_ACCESS_TOKEN;
 
-      // 1) Setup the client with our credentials. 
+      // 1) Setup the client with our credentials.
       //
       const client = createClient({ accessToken: strManagementAccessToken });
       console.log(strManagementAccessToken);
       const getSpace = await client.getSpace(import.meta.env.VITE_SPACE_ID);
-      const environment = await getSpace.getEnvironment('master');
+      const environment = await getSpace.getEnvironment("master");
 
       // 2) Invoking the contentful content part. See_ Content part and content model in contentful
       //
       const newPost = await environment.createEntryWithId(
-        'blog',
+        "blog",
         crypto.randomUUID(),
         {
           fields: {
@@ -85,15 +83,14 @@ export const Post = () => {
         author: "",
         imageUrl: "",
         comment: "",
-        content: ""
+        content: "",
       });
 
       alert("Entry added successfully!");
-    }
-    catch (err) {
+    } catch (err) {
       console.error(err);
     }
-  }
+  };
 
   return (
     <>
@@ -138,7 +135,7 @@ export const Post = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <textarea
             name="comment"
             value={FormData.comment}
@@ -147,12 +144,12 @@ export const Post = () => {
             required
             onChange={handleChange}
           ></textarea>
-        </div>
+        </div> */}
         <div className="flex justify-center">
           <textarea
             name="content"
             value={FormData.content}
-            className="textarea textarea-primary w-[650px] h-[250px]"
+            className="textarea textarea-primary w-[650px] h-[500px]"
             placeholder="Write content"
             required
             onChange={handleChange}
