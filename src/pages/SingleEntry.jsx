@@ -22,20 +22,20 @@ const SingleEntry = () => {
           <h2 className="text-center ">{singleBlogPost.fields.title}</h2>
         </div>
         <p className="flex text-xl mb-4">
-          <p className="font-bold">Post by:</p> {singleBlogPost.fields.author}
+          <p className="font-bold pe-2">Post by:</p> {singleBlogPost.fields.author}
         </p>
         <img
           className="w-[800px] h-[500px] aspect-square object-cover px-2 rounded-3xl"
           src={singleBlogPost.fields.imgSrc}
           alt={singleBlogPost.fields.title}
         />
-        <div className="flex justify-center flex-wrap gap-4 md:gap-[470px] lg:gap-[500px] ms-2 my-2">
+        <div className="flex justify-center flex-wrap gap-4 md:gap-[440px] lg:gap-[480px] ms-2 my-2">
           <p className="flex">
-            <p className="font-bold">Date: </p>
+            <p className="font-bold pe-2">Date: </p>
             {singleBlogPost.fields.date}
           </p>
           <p className="flex">
-            <p className="font-bold">Comments: </p>
+            <p className="font-bold pe-2">Comments: </p>
             {singleBlogPost.fields.comments}
           </p>
         </div>
