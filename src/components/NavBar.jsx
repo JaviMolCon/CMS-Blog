@@ -51,7 +51,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost lg:ml-56 text-4xl">WanderLov</a>
+        <a className="lg:ml-32 text-3xl lg:text-4xl font-bold cursor-default" href="/home"><img src="https://cdn.discordapp.com/attachments/1212393171879723008/1227636540830646433/-WanderLov-_THIS.png?ex=6629209f&is=6616ab9f&hm=013a266e5b03ced29412b6f106b99162db15d8279a3604e903cf5d8dea322655&"></img></a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-bold text-2xl">
