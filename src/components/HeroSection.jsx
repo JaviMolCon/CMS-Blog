@@ -11,14 +11,21 @@ const HeroSection = () => {
         }}
       >
         <div className="hero-overlay bg-opacity-30"></div>
-        <div className="hero-content text-center text-neutral-content">
+        <div className="hero-content  text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-6xl font-bold">Hello there</h1>
-            <p className="mb-5 font-bold text-2xl">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+            <h1 className="mb-5 lg:text-9xl text-5xl font-bold">
+              Explore. Discover. Love.
+            </h1>
+
+            <p className="mb-5 font-bold text-xl text-justify ">
+              Step into WanderLov, where the call of the unknown beckons and
+              every journey is a love affair with exploration. Join us as we
+              wander through diverse landscapes, uncover hidden treasures, and
+              embrace the magic of travel. With WanderLov as our compass, let's
+              embark on adventures that nourish the soul and ignite the spirit
+              of wanderlust.
             </p>
+
             <label className="input input-bordered flex items-center gap-2">
               <input
                 type="text"
