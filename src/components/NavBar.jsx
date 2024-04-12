@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "pastel");
