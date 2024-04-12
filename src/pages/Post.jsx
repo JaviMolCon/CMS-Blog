@@ -106,7 +106,7 @@ export const Post = () => {
           <input
             type="text"
             name="title"
-            value={FormData.title}
+            value={formData.title}
             placeholder="Enter a title"
             className="input input-bordered input-primary w-[650px]"
             required
@@ -117,7 +117,7 @@ export const Post = () => {
           <input
             type="text"
             name="author"
-            value={FormData.author}
+            value={formData.author}
             placeholder="Enter the name of the author"
             className="input input-bordered input-primary w-[650px]"
             required
@@ -128,7 +128,7 @@ export const Post = () => {
           <input
             type="url"
             name="imageUrl"
-            value={FormData.imageUrl}
+            value={formData.imageUrl}
             placeholder="Enter the image url"
             className="input input-bordered input-primary w-[650px]"
             required
@@ -138,7 +138,7 @@ export const Post = () => {
         {/* <div className="flex justify-center">
           <textarea
             name="comment"
-            value={FormData.comment}
+            value={formData.comment}
             className="textarea textarea-primary w-[650px] h-[250px]"
             placeholder="Write content"
             required
@@ -148,7 +148,7 @@ export const Post = () => {
         <div className="flex justify-center">
           <textarea
             name="content"
-            value={FormData.content}
+            value={formData.content}
             className="textarea textarea-primary w-[650px] h-[500px]"
             placeholder="Write content"
             required
